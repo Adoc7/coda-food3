@@ -1,0 +1,110 @@
+<template name="pizzas">
+    <div class="deb">
+        <label class="control-label">PIZZAS</label>
+        {{#each pizzas}}
+        <form class="formulaire">
+        <div class="conteneur_prodPi">
+
+            <img src="/{{image}}" class="prod"/>
+            <div class="pizza" >
+                <!--<br>-->
+                <b>{{name}}</b> </div>
+            <div class="ingredPi"> Ingrédients :  {{description}}</div>
+            <div class="prix" >
+                Prix : {{price}} euros</div>
+            <span>{{> compteur1}}   </span>
+        </div>
+        <br>
+        </form>
+        {{/each}}
+    </div>
+</template>
+
+
+<template name="burgers">
+    <div class="deb">
+        <label class="control-label">BURGERS</label>
+        {{#each burgers}}
+        <form class="formulaire">
+
+            <div class="conteneur_prodBu">
+
+                <img src="/{{image}}" class="prod"/>
+                <div class="pizza" >
+                    <!--<br>-->
+                    <b>{{name}}</b> </div>
+                <div class="ingredBu"> Ingrédients :  {{description}}</div>
+                <div class="prix" >
+                    Prix : {{price}} euros</div>
+                <span>{{> compteur1}}   </span>
+            </div>
+            <br>
+        </form>
+        {{/each}}
+    </div>
+</template>
+
+<template name="salades">
+    <div class="deb">
+        <label class="control-label">SALADES</label>
+        {{#each salades}}
+        <form class="formulaire">
+            <div class="conteneur_prodSa">
+                <img src="/{{image}}" class="prod"/>
+                <div class="pizza" >
+                    <!--<br>-->
+                    <b>{{name}}</b> </div>
+                <div class="ingredSa">
+                    Ingrédients :  {{description}}</div>
+                <div class="prix" >
+                    Prix : {{price}} euros</div>
+                <span>{{> compteur1}}   </span>
+            </div>
+            <br>
+        </form>
+        {{/each}}
+    </div>
+</template>
+
+<template name="desserts">
+    <div class="deb">
+        <label class="control-label">DESSERTS</label>
+        {{#each desserts}}
+        <form class="formulaire">
+            <div class="conteneur_prodDeBo">
+                <img src="/{{image}}" class="prod"/>
+                <div class="pizza" >
+                    <!--<br>-->
+                    <b>{{name}}</b> </div>
+                <div class="ingredDeBo"></div>
+                <div class="prix" >
+                    Prix : {{price}} euros</div>
+                <span>{{> compteur1}}   </span>
+            </div>
+            <br>
+        </form>
+        {{/each}}
+    </div>
+</template>
+
+<template name="boissons">
+    <label class="control-label">BOISSONS</label>
+
+    <div class="deb">
+        {{#each boissons}}
+        <form class="formulaire">
+            <div class="conteneur_prodDebo">
+                <img src="/{{image}}" class="prod"/>
+                <div class="pizza" >
+                    <!--<br>-->
+                    <b>{{name}}</b> </div>
+                <div class="ingredDeBo"></div>
+                <div class="prix" >
+                    Prix : {{price}} euros</div>
+                <span>{{> compteur1}}   </span>
+            </div>
+            <br>
+        </form>
+        {{/each}}
+    </div>
+</template>

@@ -1,0 +1,37 @@
+<!--<template name="categorie">-->
+    <!--<div class="container">-->
+        <!--<div class="row">-->
+            <!--<div class="box col-xs-10 text-center col-sm-6 text-center col-md-4 text-center">-->
+                <!--<div class="content">-->
+
+                    <!--{{#each categorie}}-->
+                    <!--<a href="/pages/{{name}}"><h2>{{name}}</h2></a>-->
+                    <!--<img class="imagefood" src="/{{image}}">-->
+                    <!--{{/each}}-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</template>-->
+
+<template name="categories">
+    <!--<div class="deb1">-->
+    <div>
+        {{#each categories}}
+        <div class="conteneur_home">
+            <div class="TitreHome">
+                <b>{{name}}</b>
+            </div>
+            <br>
+            <img src="/{{image}}" class="prodHome"/>
+            <br>
+            <span class="bouton_commande">
+            <a href="/pages/{{name}}">COMMANDER</a>
+            </span>
+        </div>
+        <br>
+        {{/each}}
+
+    </div>
+
+</template>
