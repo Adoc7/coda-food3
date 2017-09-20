@@ -22,4 +22,7 @@ Meteor.publish('boissons', function(){
     return Boissons.find();
 });
 
+Meteor.publish('panier', function(){
+    return Panier.find();
+});
 

@@ -3,6 +3,7 @@ Meteor.subscribe("burgers");
 Meteor.subscribe("salades");
 Meteor.subscribe("desserts");
 Meteor.subscribe("boissons");
+Meteor.subscribe("panier");
 
 
 Template.pizzas.helpers({
@@ -20,3 +21,8 @@ Template.desserts.helpers({
 Template.boissons.helpers({
     boissons: function() {return Boissons.find()}
 });
+Template.panier.helpers({
+    panier: function() {return Panier.find()}
+});
+
+
