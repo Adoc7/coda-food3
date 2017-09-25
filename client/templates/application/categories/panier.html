@@ -1,17 +1,32 @@
 <template name="panier">
-    <h3>{{panier}}</h3>
+    <form class="totalcommande">
+        <div class="content">
+            <h2>Votre commande</h2>
+            <h3>Total de votre commande : {{totalite}}€ </h3>
 
-    <!--<img src="/{{image}}" class="prod"/>-->
+            <ul>
+                {{#each panier}}
+                <div class="prix">{{counter}} {{name}} à {{price}}€ = {{total}} €
+                    <img  src="/{{image}} " class="prod"/>
+                </div>
+                <input class="remove" name="supprimer" type="submit" value="supprimer">
 
-    <div class="prix">Nom : {{name}}</div>
-    <div class="prix">Prix : {{price}} euros</div>
+                <input class="modif {{_id}}" name="inputcompteur" type="number" min=0 max=7 value={{counter}}>
 
-
-
-    <!--name:this.name,-->
-    <!--price:this.price,-->
-    <!--image:this.image,-->
-    <!--compteur:compteur,-->
-    <!--total:this.price*compteur-->
+                <!--   <li id="test">{{compteur}} {{price}} = {{total}} €
+                        <div class="modifier">
+                    <input class="plus" type="submit" value="+">
+                    <input class="moins" type="submit" value="-">
+                        </div>
+                    </li>-->
+                {{/each}}
+            </ul>
+        </div>
+        <a class="retour" href="{{pathFor 'categorie'}}">
+            <input type="submit" name="accueil" value="Accueil">
+        </a>
+    </form>
 </template>
+
+
 

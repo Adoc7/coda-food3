@@ -1,25 +1,40 @@
 <template name="pizzas">
     <div class="deb">
         <label class="control-label">{{name}}</label>
+        <!--{{#each pizzas}}-->
+
+        <!--<form class="formulaire">-->
+        <!--<div class="conteneur_prodPi">-->
+
+            <!--<img src="/{{image}}" class="prod"/>-->
+            <!--<div class="pizza" >-->
+                <!--&lt;!&ndash;<br>&ndash;&gt;-->
+                <!--<b>{{name}}</b> </div>-->
+            <!--<div class="ingredPi"> Ingrédients :  {{description}}</div>-->
+            <!--<div class="prix" >-->
+                <!--Prix : {{price}} euros</div>-->
+            <!--&lt;!&ndash;<span>{{> pizzas_count}}</span>&ndash;&gt;-->
+
+            <!--<input class="text1" name="qte" type="text" value="Qté :">-->
+            <!--<input  class="text2" name="compteur" min=0 max=10 type="number" value=0>-->
+            <!--<input class="text3" type="submit" name="valid" value="valider">-->
+
+        <!--</div>-->
+        <!--</form>-->
+        <!--<br>-->
+
+        <!--{{/each}}-->
+
         {{#each pizzas}}
         <form class="formulaire">
-        <div class="conteneur_prodPi">
-
-            <img src="/{{image}}" class="prod"/>
-            <div class="pizza" >
-                <!--<br>-->
-                <b>{{name}}</b> </div>
-            <div class="ingredPi"> Ingrédients :  {{description}}</div>
-            <div class="prix" >
-                Prix : {{price}} euros</div>
-            <span>{{> pizzas_count}}   </span>
-            <div>
-            </div>
-        </div>
-        <br>
+            <h3>{{name}}</h3>
+            <h2>{{price}}€</h2>
+            <img class="imagefood" src="/{{image}}">
+            <input class="compteur" name="inputcompteur" type="number" min=0 max=7 value=0>
+            <input class="commander" type="submit" name="commander" value="valider">
         </form>
-
         {{/each}}
+
     </div>
 </template>
 
@@ -39,7 +54,7 @@
                 <div class="ingredBu"> Ingrédients :  {{description}}</div>
                 <div class="prix" >
                     Prix : {{price}} euros</div>
-                <!--<span>{{> compteur1}}   </span>-->
+                <span>{{> pizzas_count}}   </span>
             </div>
             <br>
         </form>
@@ -61,7 +76,7 @@
                     Ingrédients :  {{description}}</div>
                 <div class="prix" >
                     Prix : {{price}} euros</div>
-                <!--<span>{{> compteur1}}   </span>-->
+                <span>{{> pizzas_count}}   </span>
             </div>
             <br>
         </form>
@@ -82,7 +97,7 @@
                 <div class="ingredDeBo"></div>
                 <div class="prix" >
                     Prix : {{price}} euros</div>
-                <!--<span>{{> compteur1}}   </span>-->
+                <span>{{> pizzas_count}}   </span>
             </div>
             <br>
         </form>
@@ -103,7 +118,7 @@
                 <div class="ingredDeBo"></div>
                 <div class="prix" >
                     Prix : {{price}} euros</div>
-                <!--<span>{{> compteur1}}   </span>-->
+                <span>{{> pizzas_count}}   </span>
             </div>
             <br>
         </form>
@@ -112,10 +127,6 @@
 </template>
 
 
-<!--<template name="panier">-->
-    <!--<div>-->
-        <!--{{number}}-->
-    <!--</div>-->
-<!--</template>-->
+
 
 

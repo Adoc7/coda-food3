@@ -1,5 +1,4 @@
 <template name="categories">
-    <!--<div class="deb1">-->
     <div>
         {{#each categories}}
         <div class="conteneur_home">
@@ -9,13 +8,14 @@
             <br>
             <img src="/{{image}}" class="prodHome"/>
             <br>
+            <div class="bouton">
             <span class="bouton_commande">
-            <a href="/pages/{{name}}">COMMANDER</a>
+            <a class="bouton_commande_texte" href="/pages/{{name}}">COMMANDER</a>
             </span>
+            </div>
         </div>
         <br>
         {{/each}}
 
     </div>
-
 </template>

@@ -3,13 +3,24 @@ Meteor.subscribe("panier");
 Template.panier.helpers({
     panier: function() {
         return Panier.find();
+    },
+    //on crée une nouvelle fonction pour la totalité des commandes
+    'totalite': function() {
+        //on donne un point de départ qui est de 0
+        totalite = 0;
+        //on lui dit d'afficher le total des produits dès que c'est égal à 1
+        Panier.find({}, {fields:{total:1}}).map(function(doc) {
+            //la totalité des commandes est égale au total des produits
+            totalite += doc.total;
+        });
+        //il retourne ainsi la totalité des commandes
+        return totalite;
     }
 });
 
-//
-// Template.pizzas_count.events({
-//     'submit .pizzas'(event){
-//
+
+// Template.pizzas.events({
+//     'submit .formulaire'(event){
 //         event.preventDefault();
 //         var compteur = $("input[name='compteur']").val();
 //         Panier.insert({
@@ -17,28 +28,22 @@ Template.panier.helpers({
 //             price:this.price,
 //             image:this.image,
 //             compteur:compteur,
-//             total:this.price*compteur
+//             total:this.price*compteurTemplate.pizzas.events({
+
+
+Template.pizzas.events({
+'submit .formulaire'(event){
+    event.preventDefault();
+    var compteur = $("input[name='inputcompteur']").val();
+    Panier.insert({
+        name:this.name,
+        price:this.price,
+        image:this.image,
+        counter:compteur,
+        total:this.price*compteur
+    });
+},
+});
 //         });
 //     },
 // });
-
-
-Template.pizzas_count.events({
-    'submit .pizzas': function (event) {
-        event.preventDefault();
-        var compteur = $("input[name='compteur']").val();
-        Meteor.call('pizzas_count', {compteur: compteur});
-    }
-});
-
-Meteor.methods({
-    pizzas_count: function (post) {
-        Panier.insert({
-                name:this.name,
-                price:this.price,
-                image:this.image,
-                compteur:compteur,
-                total:this.price*compteur
-            });
-    }
-});
