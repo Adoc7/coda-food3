@@ -22,7 +22,7 @@ Template.panier.helpers({
 Template.pizzas.events({
     'submit .formulaire'(event){
         event.preventDefault();
-        var compteur = $("input[name='inputcompteur']").val();
+        var compteur = event.target.inputcompteur.value;
         Panier.insert({
             name:this.name,
             price:this.price,
@@ -36,7 +36,7 @@ Template.pizzas.events({
 Template.burgers.events({
     'submit .formulaire'(event){
         event.preventDefault();
-        var compteur = $("input[name='inputcompteur']").val();
+        var compteur = event.target.inputcompteur.value;
         Panier.insert({
             name:this.name,
             price:this.price,
@@ -46,12 +46,11 @@ Template.burgers.events({
         });
     },
 });
-
 
 Template.salades.events({
     'submit .formulaire'(event){
         event.preventDefault();
-        var compteur = $("input[name='inputcompteur']").val();
+        var compteur = event.target.inputcompteur.value;
         Panier.insert({
             name:this.name,
             price:this.price,
@@ -61,12 +60,11 @@ Template.salades.events({
         });
     },
 });
-
 
 Template.desserts.events({
     'submit .formulaire'(event){
         event.preventDefault();
-        var compteur = $("input[name='inputcompteur']").val();
+        var compteur = event.target.inputcompteur.value;
         Panier.insert({
             name:this.name,
             price:this.price,
@@ -76,12 +74,11 @@ Template.desserts.events({
         });
     },
 });
-
 
 Template.boissons.events({
     'submit .formulaire'(event){
         event.preventDefault();
-        var compteur = $("input[name='inputcompteur']").val();
+        var compteur = event.target.inputcompteur.value;
         Panier.insert({
             name:this.name,
             price:this.price,
@@ -91,8 +88,3 @@ Template.boissons.events({
         });
     },
 });
-
-
-
-
-

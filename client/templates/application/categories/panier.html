@@ -7,34 +7,45 @@
             <div>
                 {{#each panier}}
                 <div class="pan_prix">
-                <div class="pan">
-                    {{counter}} {{name}} à {{price}}€
+                    <div class="conteneur_prodPan">
+
+                    <div class="pan">
+                        <div class="pan_text">
+                    {{counter}} * {{name}} à {{price}}€
                     <br>
                     = {{total}} €
+                        </div>
                     <img  src="/{{image}} " class="prod">
                 </div>
+
+
+                    <div class="increment">
+
                     <input class="text1" name="qte" type="text" value="Modifier :">
                     <input class="modif {{_id}} text2" name="inputcompteur" type="number" min=0 max=7 value={{counter}}>
+                    </div>
 
 
-                    <br>
-                    <input class="commander text3" type="submit" name="commander" value="modifier">
                     <br>
                     <input class="remove text5" name="supprimer" type="submit" value="supprimer">
                     <!--<li id="test">{{compteur}} {{price}} = {{total}} €-->
                     <!--<li id="test">{{counter}} X {{compteur}} {{price}} = {{total}} € </li>-->
                 <br>
                 </div>
+                </div>
                 {{/each}}
-            </div>
-        </div>
 
+            </div>
+
+        </div>
+        <div class="conteneur_pan">
+            <input class="commander text3" type="submit" name="commander" value="VALIDER">
+            <br>  <br>
         <a class="retour" href="{{pathFor 'Categories'}}">
             <input class="text4" type="submit" name="accueil" value="Accueil">
         </a>
+        </div>
+
     </form>
     </div>
 </template>
-
-
-
