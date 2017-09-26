@@ -19,31 +19,80 @@ Template.panier.helpers({
 });
 
 
-// Template.pizzas.events({
-//     'submit .formulaire'(event){
-//         event.preventDefault();
-//         var compteur = $("input[name='compteur']").val();
-//         Panier.insert({
-//             name:this.name,
-//             price:this.price,
-//             image:this.image,
-//             compteur:compteur,
-//             total:this.price*compteurTemplate.pizzas.events({
-
-
 Template.pizzas.events({
-'submit .formulaire'(event){
-    event.preventDefault();
-    var compteur = $("input[name='inputcompteur']").val();
-    Panier.insert({
-        name:this.name,
-        price:this.price,
-        image:this.image,
-        counter:compteur,
-        total:this.price*compteur
-    });
-},
+    'submit .formulaire'(event){
+        event.preventDefault();
+        var compteur = $("input[name='inputcompteur']").val();
+        Panier.insert({
+            name:this.name,
+            price:this.price,
+            image:this.image,
+            counter:compteur,
+            total:this.price*compteur
+        });
+    },
 });
-//         });
-//     },
-// });
+
+Template.burgers.events({
+    'submit .formulaire'(event){
+        event.preventDefault();
+        var compteur = $("input[name='inputcompteur']").val();
+        Panier.insert({
+            name:this.name,
+            price:this.price,
+            image:this.image,
+            counter:compteur,
+            total:this.price*compteur
+        });
+    },
+});
+
+
+Template.salades.events({
+    'submit .formulaire'(event){
+        event.preventDefault();
+        var compteur = $("input[name='inputcompteur']").val();
+        Panier.insert({
+            name:this.name,
+            price:this.price,
+            image:this.image,
+            counter:compteur,
+            total:this.price*compteur
+        });
+    },
+});
+
+
+Template.desserts.events({
+    'submit .formulaire'(event){
+        event.preventDefault();
+        var compteur = $("input[name='inputcompteur']").val();
+        Panier.insert({
+            name:this.name,
+            price:this.price,
+            image:this.image,
+            counter:compteur,
+            total:this.price*compteur
+        });
+    },
+});
+
+
+Template.boissons.events({
+    'submit .formulaire'(event){
+        event.preventDefault();
+        var compteur = $("input[name='inputcompteur']").val();
+        Panier.insert({
+            name:this.name,
+            price:this.price,
+            image:this.image,
+            counter:compteur,
+            total:this.price*compteur
+        });
+    },
+});
+
+
+
+
+
