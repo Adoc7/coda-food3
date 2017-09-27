@@ -81,7 +81,13 @@ text-align: center;
     height:auto;
 }
 
-.pan_prix, .conteneur_pan, .conteneur_prodPi, .conteneur_prodSa, .conteneur_prodBu, .conteneur_prodDeBo {
+.pan_prix,
+.conteneur_pan,
+.conteneur_prodPi,
+.conteneur_prodSa,
+.conteneur_prodBu,
+.conteneur_prodDeBo,
+.conteneur_prodPan{
     position: relative;
     float: left;
     display: inline-block;
@@ -98,10 +104,21 @@ text-align: center;
 .pan{
     /*position:absolute;*/
  /*height:150px;*/
-    background-color: black;
+
+
+    background: -webkit-linear-gradient(uo, rgba(0,0,0,1), rgba(120,5,5,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, rgba(120,5,5,1), rgba(0,0,0,0.1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient( bottom, rgba(120,5,5,1), rgba(0,0,0,0.1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, rgba(120,5,5,1), rgba(0,0,0,0.1)); /* Standard syntax (must be last) */
 }
 
-.conteneur_prodPi, .conteneur_prodSa, .conteneur_prodBu, .conteneur_prodDeBo {
+
+
+.conteneur_prodPi,
+.conteneur_prodSa,
+.conteneur_prodBu,
+.conteneur_prodDeBo,
+.conteneur_prodPan{
   width:180px;
   margin-bottom:100px;
     /*display:block;*/
@@ -144,8 +161,15 @@ text-align: center;
 }
 
 .pan{
-    padding:2vw;
+    padding:1vw;
     text-align:center;
+}
+
+.pan_text{
+    padding-top:16px;
+    font-size:16px;
+    font-weight:bold;
+    height:80px;
 }
 .conteneur_prodPi{
     height:550px;
@@ -157,11 +181,15 @@ text-align: center;
     height:640px;
 }
 .conteneur_prodDeBo{
-    height:420px;
+    height:450px;
 }
 
-/*.conteneur_prodPan{*/
-/*}*/
+.conteneur_prodPan{
+    margin-top:50px;
+    margin-left:50px;
+
+    height:450px;
+}
 .label{
     padding-right:60px;
 
@@ -173,7 +201,12 @@ text-align: center;
 
 
 
-.ingredPi, .ingredSa, .ingredBu, .ingredDeBo, .pizza, .prix{
+.ingredPi,
+.ingredSa,
+.ingredBu,
+.ingredDeBo,
+.pizza,
+.prix{
     position: relative;
     margin-left:14px;
     width:150px;
@@ -195,7 +228,10 @@ text-align: center;
 }
 
 
-.ingredPi, .ingredSa, .ingredBu, .ingredDeBo{
+.ingredPi,
+.ingredSa,
+.ingredBu,
+.ingredDeBo{
     padding: 10px;
     font-size:10px;
     color:black;
@@ -245,7 +281,9 @@ text-align: center;
 .valid_com{
     /*display-outside: ;*/
 }
-.text3, .text4, .text5{
+.text3,
+.text4,
+.text5{
     margin-top:5px;
         border:none;
 }
@@ -287,7 +325,10 @@ color:white!important;
 .text3, .text5{
     font-size:20px;
 }
-.text1, .text3, .text4, .text5{
+.text1,
+.text3,
+.text4,
+.text5{
     z-index:150!important;
     /*margin-left:34px!important;*/
     height:40px!important;
@@ -320,7 +361,6 @@ color:white!important;
 
 .text{
     background-color: transparent;
-
     margin-left:10px;
     color:black;
     font-size:20px;
@@ -424,7 +464,11 @@ color:white!important;
     background: rgba(80, 40, 40,0.7);
 }
 
-.grid-block, .main, .post, .comments li, .comment-form {
+.grid-block,
+.main,
+.post,
+.comments li,
+.comment-form {
     /*background: rgba(40, 80, 40,0.7);*/
     /*background: #3c763d;*/
     border-radius: 3px;
@@ -474,7 +518,6 @@ body {
     margin-bottom: 10px!important;}
 /* line 32, ../sass/style.scss */
 .navbar .navbar-inner {
-
     border-radius: 0px 0px 3px 3px!important;
 }
 .navbar-brand:hover{
@@ -489,8 +532,6 @@ body {
 
 #spinner {
     height: 300px;
-
-
 }
 
 

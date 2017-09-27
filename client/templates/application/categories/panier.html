@@ -6,40 +6,51 @@
             <h3 id="tot_com">Total : {{totalite}}€ </h3>
             <div>
                 {{#each panier}}
-                <div class="pan_prix">
+                <!--<div class="pan_prix">-->
+                <div class="">
                     <div class="conteneur_prodPan">
 
                     <div class="pan">
                         <div class="pan_text">
-                    {{counter}} * {{name}} à {{price}}€
-                    <br>
+                    {{counter}} * {{name}}  <br> à {{price}}€
+
                     = {{total}} €
                         </div>
                     <img  src="/{{image}} " class="prod">
                 </div>
-
-
                     <div class="increment">
-
                     <input class="text1" name="qte" type="text" value="Modifier :">
                     <input class="modif {{_id}} text2" name="inputcompteur" type="number" min=0 max=7 value={{counter}}>
                     </div>
-
-
                     <br>
                     <input class="remove text5" name="supprimer" type="submit" value="supprimer">
                     <!--<li id="test">{{compteur}} {{price}} = {{total}} €-->
                     <!--<li id="test">{{counter}} X {{compteur}} {{price}} = {{total}} € </li>-->
                 <br>
+
+
+                        <!--<p>Modifier la quantité :-->
+                            <!--<input class="modif {{_id}}" name="inputcompteur" type="number" min=0 max=7 value={{counter}}>-->
+                        <!--</p>-->
+                        <!---->
+
+
+
+
                 </div>
                 </div>
                 {{/each}}
-
             </div>
-
         </div>
         <div class="conteneur_pan">
+            {{#if currentUser }}
             <input class="commander text3" type="submit" name="commander" value="VALIDER">
+            {{else}}
+            <h2>Inscrivez vous ou connectez vous pour passer votre commande !</h2>
+            {{/if}}
+
+
+
             <br>  <br>
         <a class="retour" href="{{pathFor 'Categories'}}">
             <input class="text4" type="submit" name="accueil" value="Accueil">

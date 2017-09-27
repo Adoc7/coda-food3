@@ -18,6 +18,52 @@ Template.panier.helpers({
     }
 });
 
+// BOUTON MODIFIER
+Template.panier.events({
+    'click .modif'(event) {
+        event.preventDefault();
+        var compteur = $("."+this._id+"").val();
+        Panier.update(this._id, {
+            name:this.name,
+            price:this.price,
+            image:this.image,
+            counter:compteur,
+            total:this.price*compteur,
+            _id:this._id
+        });
+    },
+});
+
+
+// BOUTON SUPPRIMER
+
+Template.panier.events({
+    'click input.remove'(event){
+        event.preventDefault();
+        Panier.remove(this._id);
+    },
+});
+
+
+// BOUTON VALIDER PANIER
+// Template.panier.events({
+//     'click .commander'(event) {
+//         event.preventDefault();
+//         var compteur = $(". "+this._id+"").val();
+//         Panier.update(this._id, {
+//             name:this.name,
+//             price:this.price,
+//             image:this.image,
+//             counter:compteur,
+//             total:this.price*compteur,
+//             _id:this._id
+//         });
+//     },
+// });
+
+
+
+
 
 Template.pizzas.events({
     'submit .formulaire'(event){
