@@ -1,6 +1,7 @@
 <template name="panier">
     <div class="deb">
-    <form class="totalcommande">
+    <!--<form class="totalcommande">-->
+    <form class="valider">
         <div class="conteneur_pan">
             <h2 id="com">Votre commande</h2>
             <h3 id="tot_com">Total : {{totalite}}€ </h3>
@@ -33,18 +34,15 @@
                             <!--<input class="modif {{_id}}" name="inputcompteur" type="number" min=0 max=7 value={{counter}}>-->
                         <!--</p>-->
                         <!---->
-
-
-
-
                 </div>
                 </div>
                 {{/each}}
             </div>
         </div>
         <div class="conteneur_pan">
+            <!--<form class="valider">-->
             {{#if currentUser }}
-            <input class="commander text3" type="submit" name="commander" value="VALIDER">
+            <input class="commander text3" type="submit" name="commander" value="Valider">
             {{else}}
             <h2>Inscrivez vous ou connectez vous pour passer votre commande !</h2>
             {{/if}}

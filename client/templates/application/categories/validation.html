@@ -1,0 +1,37 @@
+<template name="validation">
+
+
+
+
+
+
+    <div class="">
+        <div class="conteneur_valid_pan">
+
+            <div class="pan_valid">
+                <div class="pan_valid_text">
+                    {{#each validation}}
+
+                    {{counter}} * {{name}} à {{price}}€= {{total}} €
+                    <br>
+                    {{/each}}
+                </div>
+            </div>
+
+
+            <br>
+
+        </div>
+    </div>
+
+
+    <br>
+    <div class="conteneur_valid_total_pan">
+    <br><h2>Total de la commande :{{totalite}}€<br></h2>
+    </div>
+
+
+
+
+
+</template>

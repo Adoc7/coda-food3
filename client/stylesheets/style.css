@@ -83,6 +83,8 @@ text-align: center;
 
 .pan_prix,
 .conteneur_pan,
+.conteneur_valid_pan,
+.conteneur_valid_total_pan,
 .conteneur_prodPi,
 .conteneur_prodSa,
 .conteneur_prodBu,
@@ -97,9 +99,28 @@ text-align: center;
 }
 
 .conteneur_pan{
+    float:left;
     padding:5%;
     width:100%;
+    height:100%;
 }
+
+.conteneur_valid_pan{
+    float:left;
+    padding:5%;
+    width:45%;
+    background-color: rgba(25,7,5,0.6);
+
+}
+
+.conteneur_valid_total_pan{
+    float:right;
+    padding:5%;
+    width:50%;
+    background-color: rgba(10,70,100,0.5);
+
+}
+
 
 .pan{
     /*position:absolute;*/
@@ -171,6 +192,26 @@ text-align: center;
     font-weight:bold;
     height:80px;
 }
+
+.pan_valid{
+    padding:1vw;
+    width:100%;
+    text-align:center;
+    /*background-color: rgba(0,200,0,0.5);*/
+}
+
+.pan_valid_text{
+    padding-top:16px;
+line-height: 35px;
+font-size:16px;
+    font-weight:bold;
+    height:auto;
+    /*background-color: rgba(0,200,0,0.5);*/
+
+}
+
+
+
 .conteneur_prodPi{
     height:550px;
 }
